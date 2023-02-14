@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeInventory", "AcmeInventory\AcmeInventory\AcmeInventory.csproj", "{0B5B51E0-D313-4246-8DBC-BE5243C3C07F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeInventory.Android", "AcmeInventory\AcmeInventory.Android\AcmeInventory.Android.csproj", "{A6CA0577-055B-4DDE-8137-E894550333D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeInventory.Desktop", "AcmeInventory\AcmeInventory.Desktop\AcmeInventory.Desktop.csproj", "{264D505F-BD09-43D4-AED3-932EE5A9F920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeInventory.iOS", "AcmeInventory\AcmeInventory.iOS\AcmeInventory.iOS.csproj", "{FBB28D03-0F2F-4750-B19E-5325472B093A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeInventory.Web", "AcmeInventory\AcmeInventory.Web\AcmeInventory.Web.csproj", "{45568560-6F73-4A57-A66E-6FC348F4A386}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B5B51E0-D313-4246-8DBC-BE5243C3C07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5B51E0-D313-4246-8DBC-BE5243C3C07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5B51E0-D313-4246-8DBC-BE5243C3C07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5B51E0-D313-4246-8DBC-BE5243C3C07F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CA0577-055B-4DDE-8137-E894550333D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CA0577-055B-4DDE-8137-E894550333D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CA0577-055B-4DDE-8137-E894550333D4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A6CA0577-055B-4DDE-8137-E894550333D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CA0577-055B-4DDE-8137-E894550333D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CA0577-055B-4DDE-8137-E894550333D4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{264D505F-BD09-43D4-AED3-932EE5A9F920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264D505F-BD09-43D4-AED3-932EE5A9F920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264D505F-BD09-43D4-AED3-932EE5A9F920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264D505F-BD09-43D4-AED3-932EE5A9F920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBB28D03-0F2F-4750-B19E-5325472B093A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB28D03-0F2F-4750-B19E-5325472B093A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBB28D03-0F2F-4750-B19E-5325472B093A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FBB28D03-0F2F-4750-B19E-5325472B093A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBB28D03-0F2F-4750-B19E-5325472B093A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBB28D03-0F2F-4750-B19E-5325472B093A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{45568560-6F73-4A57-A66E-6FC348F4A386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45568560-6F73-4A57-A66E-6FC348F4A386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45568560-6F73-4A57-A66E-6FC348F4A386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45568560-6F73-4A57-A66E-6FC348F4A386}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61660E09-423D-4EC6-9805-EDF0C49A73F8}
+	EndGlobalSection
+EndGlobal
