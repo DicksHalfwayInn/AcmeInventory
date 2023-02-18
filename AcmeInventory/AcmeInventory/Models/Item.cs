@@ -18,7 +18,17 @@ namespace AcmeInventory.Models
 
         public int Quantity { get; set; }
 
-            public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
+        public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
+
+        public Item(int id, string identifier, string description, decimal price, int quantity)
+        {
+            Id = id;
+            Identifier = identifier;
+            Description = description;
+            Price = price;
+            Quantity = quantity;
+
+        }
 
 
     }
