@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace AcmeInventory.Models
 {
     public class InvoiceDetail
     {
-        public int DetailId { get; set; }
+        
+        public int Id { get; set; }
 
         public Item Item { get; set; }
 

@@ -1,4 +1,5 @@
-﻿using AcmeInventory.Models;
+﻿using AcmeInventory.DataAccess;
+using AcmeInventory.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,11 @@ namespace AcmeInventory.Services
 {
     public class DummyCompanyAccountingDataService : ICompanyAccountingDataService
     {
+        public CompanyAccountingContext Db = new CompanyAccountingContext();
+
         public Task<List<Customer>> GetCustomers()
         {
-            throw new NotImplementedException()
+            throw new NotImplementedException();
         }
 
         public Task<List<Invoice>> GetInvoices()

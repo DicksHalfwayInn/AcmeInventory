@@ -8,11 +8,11 @@ namespace AcmeInventory.Models
 {
     public class Invoice
     {
-        public int InvoiceId { get; set; }
+        public int Id { get; set; }
 
         public Customer Customer { get; set; }
 
-        public ICollection<InvoiceDetail> invoiceDetails { get; set; }
+        public ICollection<InvoiceDetail> InvoiceDetails { get; set; }
 
 
         

@@ -17,5 +17,23 @@ namespace AcmeInventory.DataAccess
         public DbSet<InvoiceDetail> InvoiceDetails { get; set; }
 
         public DbSet<Item> Items { get; set; }
+
+        public string DbPath { get; }
+
+        public CompanyAccountingContext()
+        {
+            var folder = Environment.SpecialFolder.LocalApplicationData;
+            var path = Environment.GetFolderPath(folder);
+
+            path = @"D:\Repos\";
+
+            DbPath = System.IO.Path.Join(path, "CompanyAccounting.db");
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlite($"Data Source={DbPath}");
+        }
+           
     }
 }
