@@ -7,19 +7,26 @@
              x:Class="AcmeInventory.Views.MainView"
              Foreground="White"
              Background="#171C2C">
+	
 	<Design.DataContext>
 		<viewModels:MainViewModel />
 	</Design.DataContext>
 
 	<UserControl.Styles>
+
+		<!-- The default override settings for a button with classes=Button.tab -->
 		<Style Selector="Button.tab">
 			<Setter Property="FontSize" Value="25"/>
 			<Setter Property="Foreground" Value="White"></Setter>
 			<Setter Property="Background" Value="{DynamicResource BrightBlueBrush}"></Setter>
-			<Setter Property="CornerRadius" Value="5"></Setter>
 			<Setter Property="Padding" Value="7, 2"></Setter>
 			<Setter Property="Opacity" Value="{Binding ButtonOpacity}"></Setter>
 		</Style>
+
+		<!-- Set up the style for Button:pointerover Background -->
+		<!--<Style Selector="Button.tab:pointerover /template/ ContentPresenter">
+			<Setter Property="Background" Value="Red"></Setter>
+		</Style>-->
 
 		<!-- Set up the style for Button:pointerover Background -->
 		<Style Selector="Button:pointerover /template/ ContentPresenter">
@@ -32,32 +39,48 @@
 		</Style>
 	</UserControl.Styles>
 
-	<Grid  RowDefinitions="Auto">
-		<StackPanel Orientation="Horizontal">
-			<Button Classes="tab" Content="Customers"
-					Opacity="{Binding CustomerButtonOpacity}"
-					Command="{Binding TabButtonPressedCommand}"
-					CommandParameter="Customer"
-					>
+	<!-- The Main Grid -->
+	<Grid  RowDefinitions="Auto,*">
 
+		<!-- Horizontal stackpanel for tabs on the first row -->
+		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+
+			<!-- Customers Tab -->
+			<Button Classes="tab" Content="Customers"
+					Opacity="{Binding CustomersButtonOpacity}"
+					Command="{Binding TabButtonPressedCommand}"
+				     
+					CommandParameter="Customer"
+					CornerRadius="{Binding CustomersTabCornerRadius}">
 			</Button>
+
+			<!-- Invoices Tab -->
 			<Button Classes="tab" Content="Invoices"
-					Opacity="{Binding InvoiceButtonOpacity}"
+					Opacity="{Binding InvoicesButtonOpacity}"
 					Command="{Binding TabButtonPressedCommand}"
 					CommandParameter="Invoice"
-					>
-
+					CornerRadius="{Binding InvoicesTabCornerRadius}"
+					Margin="10,0,0,0">
 			</Button>
 
+			<!-- Inventory Tab -->
 			<Button Classes="tab" Content="Inventory"
-		Opacity="{Binding InventoryButtonOpacity}"
-		Command="{Binding TabButtonPressedCommand}"
-		CommandParameter="Inventory"
+		            Opacity="{Binding InventoryButtonOpacity}"
+		            Command="{Binding TabButtonPressedCommand}"
+		            CommandParameter="Inventory"
+					CornerRadius="{Binding InventoryTabCornerRadius}"
+					Margin="10,0,0,0"
 					>
-
 			</Button>
 
 		</StackPanel>
+
+		<!-- Content in the second row of main grid -->
+		<Border Grid.Row="1"
+				Background="{DynamicResource BrightBlueBrush}"
+				Margin="0,-1,0,0">
+			
+		</Border>
 	</Grid>
 
 </UserControl>
