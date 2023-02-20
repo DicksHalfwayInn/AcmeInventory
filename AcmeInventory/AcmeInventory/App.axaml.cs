@@ -9,13 +9,10 @@ namespace AcmeInventory
 {
     public partial class App : Application
     {
-        CompanyAccountingContext db;
-
+     
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
-
-            db = new();
         }
 
         public override void OnFrameworkInitializationCompleted()
