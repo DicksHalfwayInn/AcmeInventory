@@ -20,7 +20,6 @@
 			<Setter Property="Foreground" Value="White"></Setter>
 			<Setter Property="Background" Value="{DynamicResource BrightBlueBrush}"></Setter>
 			<Setter Property="Padding" Value="7, 2"></Setter>
-			<Setter Property="Opacity" Value="{Binding ButtonOpacity}"></Setter>
 		</Style>
 
 		<!-- Set up the style for Button:pointerover Background -->
@@ -42,28 +41,24 @@
 
 			<!-- Customers Tab -->
 			<Button Classes="tab" Content="Customers"
-					Opacity="{Binding CustomersButtonOpacity}"
+					x:Name="CustomersTab"
 					Command="{Binding TabButtonPressedCommand}"
-				    CommandParameter="Customer"
-					CornerRadius="{Binding CustomersTabCornerRadius}">
+				    CommandParameter="Customer">
 			</Button>
 
 			<!-- Invoices Tab -->
 			<Button Classes="tab" Content="Invoices"
 					x:Name="InvoicesTab"
-					Opacity="{Binding InvoicesButtonOpacity}"
 					Command="{Binding TabButtonPressedCommand}"
 					CommandParameter="Invoice"
-					CornerRadius="{Binding InvoicesTabCornerRadius}"
 					Margin="10,0,0,0">
 			</Button>
 
 			<!-- Inventory Tab -->
 			<Button Classes="tab" Content="Inventory"
-		            Opacity="{Binding InventoryButtonOpacity}"
+					x:Name="InventoryTab"
 		            Command="{Binding TabButtonPressedCommand}"
 		            CommandParameter="Inventory"
-					CornerRadius="{Binding InventoryTabCornerRadius}"
 					Margin="10,0,0,0">
 			</Button>
 
