@@ -7,7 +7,7 @@
              x:Class="AcmeInventory.Views.MainView"
              Foreground="White"
              Background="#171C2C">
-	
+
 	<Design.DataContext>
 		<viewModels:MainViewModel />
 	</Design.DataContext>
@@ -24,11 +24,6 @@
 		</Style>
 
 		<!-- Set up the style for Button:pointerover Background -->
-		<!--<Style Selector="Button.tab:pointerover /template/ ContentPresenter">
-			<Setter Property="Background" Value="Red"></Setter>
-		</Style>-->
-
-		<!-- Set up the style for Button:pointerover Background -->
 		<Style Selector="Button:pointerover /template/ ContentPresenter">
 			<Setter Property="Background" Value="{DynamicResource BrightBlueHoverBrush}"></Setter>
 		</Style>
@@ -43,19 +38,19 @@
 	<Grid  RowDefinitions="Auto,*">
 
 		<!-- Horizontal stackpanel for tabs on the first row -->
-		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+		<StackPanel Orientation="Horizontal" Margin="10,10,0,0">
 
 			<!-- Customers Tab -->
 			<Button Classes="tab" Content="Customers"
 					Opacity="{Binding CustomersButtonOpacity}"
 					Command="{Binding TabButtonPressedCommand}"
-				     
-					CommandParameter="Customer"
+				    CommandParameter="Customer"
 					CornerRadius="{Binding CustomersTabCornerRadius}">
 			</Button>
 
 			<!-- Invoices Tab -->
 			<Button Classes="tab" Content="Invoices"
+					x:Name="InvoicesTab"
 					Opacity="{Binding InvoicesButtonOpacity}"
 					Command="{Binding TabButtonPressedCommand}"
 					CommandParameter="Invoice"
@@ -69,8 +64,7 @@
 		            Command="{Binding TabButtonPressedCommand}"
 		            CommandParameter="Inventory"
 					CornerRadius="{Binding InventoryTabCornerRadius}"
-					Margin="10,0,0,0"
-					>
+					Margin="10,0,0,0">
 			</Button>
 
 		</StackPanel>
@@ -79,7 +73,6 @@
 		<Border Grid.Row="1"
 				Background="{DynamicResource BrightBlueBrush}"
 				Margin="0,-1,0,0">
-			
 		</Border>
 	</Grid>
 

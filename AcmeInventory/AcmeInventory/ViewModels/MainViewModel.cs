@@ -20,18 +20,16 @@ namespace AcmeInventory.ViewModels
             Inventory
         }
 
-
-
         // Opacity of a tab that is unselected
         private static double unselectedButtonOpacity = .65;
 
         // Opacity of a tab that is selected
         private static double selectedButtonOpacity = 1;
 
-        private static CornerRadius unselectedButtonCornerRadius = new CornerRadius(5,5,5,5);
+        private static CornerRadius unselectedButtonCornerRadius =
+            new CornerRadius(5, 5, 5, 5);
 
-        private static CornerRadius selectedButtonCornerRadius = new CornerRadius(0,0,0,0);
-
+        private static CornerRadius selectedButtonCornerRadius = new CornerRadius(0, 0, 0, 0);
 
         /// <summary>
         /// The Customers to display
@@ -68,8 +66,6 @@ namespace AcmeInventory.ViewModels
         /// </summary>
         [ObservableProperty]
         private double customersButtonOpacity = unselectedButtonOpacity;
-
-        
 
         /// <summary>
         /// The opacity of the Inventory tab
@@ -123,52 +119,48 @@ namespace AcmeInventory.ViewModels
                         CustomersButtonOpacity = selectedButtonOpacity;
                         InvoicesButtonOpacity = unselectedButtonOpacity;
                         InventoryButtonOpacity = unselectedButtonOpacity;
-                        CustomersTabIsOpen= true;
+                        CustomersTabIsOpen = true;
                         InvoicesTabIsOpen = false;
                         InventoryTabIsOpen = false;
                         CustomersTabCornerRadius = selectedButtonCornerRadius;
                         InvoicesTabCornerRadius = unselectedButtonCornerRadius;
-                        InventoryTabCornerRadius= unselectedButtonCornerRadius;
+                        InventoryTabCornerRadius = unselectedButtonCornerRadius;
 
                         break;
                     }
 
-                    // Invoice tab was pressed
+                // Invoice tab was pressed
                 case ActiveTab.Invoice:
                     {
                         // Hightlight the Invoice tab and dim the others
                         InvoicesButtonOpacity = selectedButtonOpacity;
                         CustomersButtonOpacity = unselectedButtonOpacity;
                         InventoryButtonOpacity = unselectedButtonOpacity;
-                        InvoicesTabIsOpen= true;
-                        CustomersTabIsOpen= false;
-                        InventoryTabIsOpen= false;
-                        InvoicesTabCornerRadius= selectedButtonCornerRadius;
-                        CustomersTabCornerRadius= unselectedButtonCornerRadius;
-                        InventoryTabCornerRadius= unselectedButtonCornerRadius;
+                        InvoicesTabIsOpen = true;
+                        CustomersTabIsOpen = false;
+                        InventoryTabIsOpen = false;
+                        InvoicesTabCornerRadius = selectedButtonCornerRadius;
+                        CustomersTabCornerRadius = unselectedButtonCornerRadius;
+                        InventoryTabCornerRadius = unselectedButtonCornerRadius;
                         break;
                     }
 
-                    // Inventory tab was pressed
+                // Inventory tab was pressed
                 case ActiveTab.Inventory:
                     {
                         // Hightlight the Inventory tab and dim the others
                         InventoryButtonOpacity = selectedButtonOpacity;
                         CustomersButtonOpacity = unselectedButtonOpacity;
                         InvoicesButtonOpacity = unselectedButtonOpacity;
-                        InventoryTabIsOpen= true;
-                        CustomersTabIsOpen= false;
-                        InvoicesTabIsOpen= false;
-                        InventoryTabCornerRadius= selectedButtonCornerRadius;
-                        CustomersTabCornerRadius= unselectedButtonCornerRadius;
-                        InvoicesTabCornerRadius= unselectedButtonCornerRadius;
+                        InventoryTabIsOpen = true;
+                        CustomersTabIsOpen = false;
+                        InvoicesTabIsOpen = false;
+                        InventoryTabCornerRadius = selectedButtonCornerRadius;
+                        CustomersTabCornerRadius = unselectedButtonCornerRadius;
+                        InvoicesTabCornerRadius = unselectedButtonCornerRadius;
                         break;
                     }
-
-
             }
         }
-
-
     }
 }
