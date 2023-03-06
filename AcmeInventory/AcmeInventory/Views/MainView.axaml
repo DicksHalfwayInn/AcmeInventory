@@ -31,6 +31,7 @@
 		<Style Selector="Button:pointerover /template/ ContentPresenter">
 			<Setter Property="TextBlock.Foreground" Value="White"></Setter>
 		</Style>
+		
 	</UserControl.Styles>
 
 	<!-- The Main Grid -->

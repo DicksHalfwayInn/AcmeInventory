@@ -1,12 +1,4 @@
-﻿//using AcmeInventory.DataAccess;
-//using AcmeInventory.Models;
-using Avalonia;
-//using CommunityToolkit.Mvvm.ComponentModel;
-//using CommunityToolkit.Mvvm.Input;
-//using System;
-//using System.Collections.ObjectModel;
-
-using AcmeInventory.Models;
+﻿using AcmeInventory.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
