@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:AcmeInventory.ViewModels"
+			 xmlns:views="clr-namespace:AcmeInventory.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AcmeInventory.Views.MainView"
              Foreground="White"
@@ -11,7 +12,6 @@
 	<Design.DataContext>
 		<viewModels:MainViewModel />
 	</Design.DataContext>
-
 	<UserControl.Styles>
 
 		<!-- The default override settings for a button with classes=Button.tab -->
@@ -35,7 +35,8 @@
 	</UserControl.Styles>
 
 	<!-- The Main Grid -->
-	<Grid  RowDefinitions="Auto,*">
+	<Grid  RowDefinitions="Auto,*"
+		   x:Name="ThisGrid">
 
 		<!-- Horizontal stackpanel for tabs on the first row -->
 		<StackPanel Orientation="Horizontal" Margin="10,10,0,0">
@@ -69,6 +70,7 @@
 		<Border Grid.Row="1"
 				Background="{DynamicResource BrightBlueBrush}"
 				Margin="0,-1,0,0">
+			<views:CustomerMainView IsVisible="{Binding CustomersTabIsOpen}"/>
 		</Border>
 	</Grid>
 

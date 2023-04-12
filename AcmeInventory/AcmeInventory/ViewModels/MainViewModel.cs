@@ -1,4 +1,5 @@
-﻿using AcmeInventory.Models;
+﻿using AcmeInventory.Enums;
+using AcmeInventory.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
@@ -11,12 +12,12 @@ namespace AcmeInventory.ViewModels
         /// <summary>
         /// Enum to indicate which tab is currently selected
         /// </summary>
-        public enum TabType
-        {
-            Customer,
-            Invoice,
-            Inventory
-        }
+        //public enum TabType
+        //{
+        //    Customer,
+        //    Invoice,
+        //    Inventory
+        //}
 
         [ObservableProperty]
         private TabType selectedTab;
@@ -70,43 +71,52 @@ namespace AcmeInventory.ViewModels
         public void TabButtonPressed(string buttonPressed)
         {
             // Convert the string parameter to an ActiveTab enum
-            Enum.TryParse(buttonPressed, out TabType selectedTab);
+            var tryParse = Enum.TryParse(buttonPressed, out TabType selectedTab);
 
-            SelectedTab = selectedTab;
-
-            // Switch on the parameter enum
-            switch (selectedTab)
+            if (tryParse)
             {
-                // Customer tab was pressed
-                case TabType.Customer:
-                    {
-                        CustomersTabIsOpen = true;
-                        InvoicesTabIsOpen = false;
-                        InventoryTabIsOpen = false;
+                SelectedTab = selectedTab;
 
-                        break;
-                    }
+                // Switch on the parameter enum
+                switch (selectedTab)
+                {
+                    // Customer tab was pressed
+                    case TabType.Customer:
+                        {
+                            CustomersTabIsOpen = true;
+                            InvoicesTabIsOpen = false;
+                            InventoryTabIsOpen = false;
 
-                // Invoice tab was pressed
-                case TabType.Invoice:
-                    {
-                        InvoicesTabIsOpen = true;
-                        CustomersTabIsOpen = false;
-                        InventoryTabIsOpen = false;
+                            break;
+                        }
 
-                        break;
-                    }
+                    // Invoice tab was pressed
+                    case TabType.Invoice:
+                        {
+                            InvoicesTabIsOpen = true;
+                            CustomersTabIsOpen = false;
+                            InventoryTabIsOpen = false;
 
-                // Inventory tab was pressed
-                case TabType.Inventory:
-                    {
-                        InventoryTabIsOpen = true;
-                        CustomersTabIsOpen = false;
-                        InvoicesTabIsOpen = false;
+                            break;
+                        }
 
-                        break;
-                    }
+                    // Inventory tab was pressed
+                    case TabType.Inventory:
+                        {
+                            InventoryTabIsOpen = true;
+                            CustomersTabIsOpen = false;
+                            InvoicesTabIsOpen = false;
+
+                            break;
+                        }
+                }
+                
             }
+            else
+            {
+                throw new Exception();
+            }
+
         }
     }
 }

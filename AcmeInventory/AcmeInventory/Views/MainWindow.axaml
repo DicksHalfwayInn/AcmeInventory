@@ -8,5 +8,7 @@
         x:Class="AcmeInventory.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="AcmeInventory">
-        <views:MainView />
+        <!--<views:MainView SelectedTab="{Binding SelectedTab}"/>-->
+	<views:CustomerMainView />
+	
 </Window>

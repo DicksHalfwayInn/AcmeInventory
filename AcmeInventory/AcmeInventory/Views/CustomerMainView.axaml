@@ -1,0 +1,53 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AcmeInventory.Views.CustomerMainView">
+	
+	
+	<UserControl.Styles>
+		<Style Selector="TabControl">
+			<Setter Property="Background" Value="WhiteSmoke" />
+		</Style>
+		<Style Selector="TabControl WrapPanel">
+			<Setter Property="Background" Value="#A3E4E9" />
+		</Style>
+		<!--<Style Selector="TabItem">
+            <Setter Property="Template"  />
+        </Style>-->
+		<Style Selector="TabItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="#75babf" />
+		</Style>
+		<Style Selector="TabItem:focus">
+			<Setter Property="Foreground" Value="#12656b" />
+			<Setter Property="Margin" Value="0,0,0,0" />
+		</Style>
+		<Style Selector="TabItem:focus /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="WhiteSmoke" />
+		</Style>
+		<Style Selector="TabItem:selected">
+			<Setter Property="Foreground" Value="#12656b" />
+			<Setter Property="Margin" Value="0 0 0 0" />
+		</Style>
+		<Style Selector="TabItem:selected">
+			<Setter Property="Background" Value="Green"/>
+		</Style>
+	</UserControl.Styles>
+
+	<TabControl>
+		<TabItem Header="tab 1"  >
+			<Border Background="">
+				<TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Text="Tab One" />
+			</Border>
+			
+		</TabItem>
+		<TabItem Header="tab 2">
+			<Label Content="hello this is tab 2" />
+		</TabItem>
+	</TabControl>
+  
+</UserControl>

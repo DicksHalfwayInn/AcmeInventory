@@ -1,6 +1,8 @@
 using Avalonia;
 using Avalonia.Controls;
 using static AcmeInventory.ViewModels.MainViewModel;
+using System;
+using AcmeInventory.Enums;
 
 namespace AcmeInventory.Views
 {
@@ -17,25 +19,28 @@ namespace AcmeInventory.Views
             new CornerRadius(5, 5, 5, 5);
 
         // Corner radius of a tab that is selected
-        private static CornerRadius selectedButtonCornerRadius = new CornerRadius(0, 0, 0, 0);
+        private static CornerRadius selectedButtonCornerRadius = 
+            new CornerRadius(0, 0, 0, 0);
 
         public MainView()
         {
             InitializeComponent();
+
+            // TODO:  Why is this defaulting to customer on initial run
+            this.GetObservable(SelectedTabProperty).Subscribe(x => SetTabButtonStyles(x));
+
+
         }
+
+        
 
         /// <summary>
         /// Direct Property that is bound to the SelectedTab property in MainViewModel
         /// </summary>
         public static readonly StyledProperty<TabType> SelectedTabProperty =
-            AvaloniaProperty.Register<MainView, TabType>(nameof(SelectedTab),
-                defaultBindingMode: Avalonia.Data.BindingMode.TwoWay);
+            AvaloniaProperty.Register<MainView, TabType>(nameof(SelectedTab));
 
-        /// <summary>
-        /// Somewhere in here I need to change the selected opacity and corner radius
-        /// for the selected tab and change them for the other tabs to be set to
-        /// opacity and corner radius for an unselected tab
-        /// </summary>
+        
         public TabType SelectedTab
         {
             get

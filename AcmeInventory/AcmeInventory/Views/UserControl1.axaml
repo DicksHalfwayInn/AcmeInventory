@@ -1,0 +1,62 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AcmeInventory.Views.UserControl1">
+
+
+	<!-- Bottom Grid -->
+	<Grid Grid.Row="4" HorizontalAlignment="Stretch">
+		<Grid ColumnDefinitions="*,*,*,*">
+			<Grid.Styles>
+				<Style Selector="Button">
+					<Setter Property="HorizontalAlignment" Value="Center"/>
+					<Setter Property="Width" Value="180"/>
+					<Setter Property="Height" Value="60"/>
+				</Style>
+			</Grid.Styles>
+		</Grid>
+
+		<!-- Report Health Button: Column 0 -->
+		<Button Grid.Column="0"
+				Name="reportHealth"
+				VerticalContentAlignment="Center"
+				TabIndex="14">
+			Report Health
+		</Button>
+
+		<!-- Set System Health to "OK" Button: Column 1 -->
+		<Button Grid.Column="1"
+				Name="setSysHealthOk"
+				TabIndex="13">
+			<TextBlock TextWrapping="Wrap"
+					   TextAlignment="Center">
+				Set System Health to "OK"
+			</TextBlock>
+		</Button>
+
+		<!-- Set System Health to "Maintenance" Button: Column 2 -->
+		<Button Grid.Column="2"
+				Name="setSystemHealthToMaint"
+				TabIndex="5">
+			<TextBlock TextWrapping="Wrap"
+					   TextAlignment="Center">
+				Set System Health to "Maintenance"
+			</TextBlock>
+		</Button>
+
+		<!-- Start Subscription Service Button: Column 3 -->
+		<Button Grid.Column="3"
+				Name="StartSubscriptionService"
+				Command="{Binding OpenAktorSelectDialog}">
+			<TextBlock TextWrapping="Wrap"
+					   TextAlignment="Center">
+				Start Subscription Service
+			</TextBlock>
+		</Button>
+	
+	</Grid>
+
+
+</UserControl>
